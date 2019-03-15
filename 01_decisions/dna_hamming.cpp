@@ -13,3 +13,20 @@ int distance = get_dna_hamming_distance("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT"
 distance will be 7
 
 */
+#include "dna_hamming_h"
+#include<string>
+using std:: string; 
+ 
+int get_dna_hamming_distance(const string &s, const string &t)
+{
+	int count = 0;
+	for (int i =0; i<s.length();++i)
+	{
+		if (s[i] != t[i])
+		{
+			count++;
+        }
+
+	}
+	return count;
+}
